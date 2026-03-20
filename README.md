@@ -1,70 +1,107 @@
 # DevTrails Gig Insurance  
 AI-driven platform protecting gig workers from income loss due to real-world disruptions.
-##  Persona & Requirement
+
+## Persona & Requirement
 
 We are targeting **gig workers**, specifically Q-commerce delivery partners such as **Blinkit**.
 
 These workers typically earn around **₹500–₹1000 per day** and rely entirely on completing deliveries for their income. Their earnings are highly unstable and directly affected by external factors such as weather conditions, pollution, and other real-world disruptions.
 
-Example :
+### Example:
 During heavy rainfall, delivery demand drops significantly, leading to a **30–40% reduction in daily income**, and in extreme cases, even a **100% loss of income** for that period.
 
 Currently, there is **no existing solution** that provides financial protection for gig workers against such income loss caused by external disruptions.
 
 Our goal is to design a system that provides **income protection for gig workers during such events**.
 
+---
+
 ## Workflow
 
-1. The user registers on the platform by providing details such as location,working hours, and their delivery platform.
-2. The system analyzes external data such as AQI Levels, Weather Condition and other data to calculate user's risk profile.
-3. Based on risk , weekly premium plan is generated dynamically .
-4. User subscribes to weekly insurance policy.
-5. System continuously monitors real -time data through API.
-6. When parametric trigger is detected , system automatically identifies potential income loss
-7. Payout is automatically initiated wihout requiring any claim from user
+1. The user registers on the platform by providing details such as location, working hours, and their delivery platform.  
+2. The system analyzes external data such as AQI levels, weather conditions, and other factors to calculate the user's risk profile.  
+3. Based on this risk, the system suggests suitable weekly premium plans.  
+4. The user selects and subscribes to a weekly insurance policy.  
+5. The system continuously monitors real-time data through APIs.  
+6. When a parametric trigger is detected, the system identifies potential income loss.  
+7. Payout is automatically initiated without requiring any manual claim.  
 
-## Weekly premium model
-Our platform uses a **dynamic weekly premium model** that is easy for gig workers to understand and afford.
+---
 
-Instead of a fixed price for everyone , the premium depends on how risky the worker's environment is. It Works like the workers who are in **safer areas** pays a **lower** premium and the one who are in **riskier areas** pays a slightly **higher** premium.
+## Weekly Premium Model
+
+Our platform uses a **risk-based weekly premium model** that is simple and flexible.
+
+Instead of forcing a fixed premium, the system first calculates the **risk level** of the user based on location and external conditions.
+
+Based on this, users are offered **three plan options**:
+
+| Plan Type | Weekly Premium | Coverage |
+|----------|--------------|----------|
+| Basic Plan | ₹29–₹39 | Low payout |
+| Standard Plan | ₹49–₹59 | Medium payout |
+| Premium Plan | ₹69–₹79 | High payout |
+
+### Key Idea:
+- The system **calculates the risk**, but the **user chooses the plan**  
+- Users in high-risk areas can still select a lower plan  
+- However, payout will be **proportional to the selected plan**
 
 ### Basic Motto:
 Workers pay a small weekly amount, and in return, they are protected from sudden income loss caused by real-world disruptions.
 
+---
+
 ## Parametric Triggers
-Payouts are not manual, they are triggered automatically based on real-world conditions.
-If any of the conditions like rainfall , local disruptions cross a predefined limit , the system assumes that the worker's income will affected and triggers instant payout.
 
-## Payout is "event" based not "time based"
-Worker receives payout only when :
--> Disruption occurs
--> Worker is active
--> Policy is also active
+Payouts are not manual — they are triggered automatically based on real-world conditions.
 
-If no disruption happens , no payout is made.
+If conditions such as **heavy rainfall, extreme pollution, or other disruptions** cross a predefined threshold, the system assumes income loss and triggers payout.
 
-##  Platform Choice 
+---
 
-We will use a mobile approach , as delivery partners are usually active on mobile.
-Mobile app allows:
---> Real time updates
---> Better Location Tracking
+## Payout Mechanism (Event-Based)
 
-##   AI & Fraud Detection
+Payout is **event-based**, not time-based.
+
+A worker receives payout only when:
+- Disruption occurs  
+- Worker is active  
+- Policy is active  
+
+If no disruption happens, no payout is made.
+
+---
+
+## Platform Choice 
+
+We will use a **mobile-first approach**, as delivery partners are usually active on mobile.
+
+Mobile apps allow:
+- Real-time updates  
+- Better location tracking  
+
+---
+
+## AI & Fraud Detection
 
 ### AI Usage:
-- Predicts risks on the basis of weather and location
-- Dynamically adjustment of weekly premium model
+- Predicts risk based on weather and location  
+- Dynamically adjusts premium suggestions  
 
-### Fraud Handling:
-- Cross Checked GPS data.
-- Unusual claims like worker is just registered only but did not work
-- Multiple claims from same area sudden
+### Fraud Handling (Market Crash ):
+
+- Cross-checking GPS data with activity  
+- Detecting inactive users attempting to claim payout  
+- Identifying multiple sudden claims from the same area  
+- Flagging suspicious patterns instead of directly rejecting claims  
+
+---
 
 ## Tech Stack
-- Frontend :  React
-- Backend  :  Node.js
-- Database :  MongoDB
-- AI/ML    :  Python(Scikit Learn)
-- Payments :  Razorpay
-  
+
+- Frontend : React  
+- Backend  : Node.js  
+- Database : MongoDB  
+- AI/ML    : Python (Scikit-learn)  
+- Payments : Razorpay  
