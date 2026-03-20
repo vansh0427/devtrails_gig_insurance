@@ -105,3 +105,7 @@ Mobile apps allow:
 - Database : MongoDB  
 - AI/ML    : Python (Scikit-learn)  
 - Payments : Razorpay  
+
+## Prototype
+
+![Prototype](GIG_MODEL.png)
