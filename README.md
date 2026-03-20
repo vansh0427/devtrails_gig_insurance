@@ -22,3 +22,11 @@ Our goal is to design a system that provides **income protection for gig workers
 5. System continuously monitors real -time data through API.
 6. When parametric trigger is detected , system automatically identifies potential income loss
 7. Payout is automatically initiated wihout requiring any claim from user
+
+## Weekly premium model
+Our platform uses a **dynamic weekly premium model** that is easy for gig workers to understand and afford.
+
+Instead of a fixed price for everyone , the premium depends on how risky the worker's environment is. It Works like the workers who are in **safer areas** pays a **lower** premium and the one who are in **riskier areas** pays a slightly **higher** premium.
+
+### Basic Motto:
+Workers pay a small weekly amount, and in return, they are protected from sudden income loss caused by real-world disruptions.
