@@ -36,11 +36,11 @@ Instead of forcing a fixed premium, the system first calculates the **risk level
 
 Based on this, users are offered **three plan options**:
 
-| Plan Type | Weekly Premium | Coverage |
-|----------|--------------|----------|
-| Basic Plan | ₹29–₹39 | Low payout |
-| Standard Plan | ₹49–₹59 | Medium payout |
-| Premium Plan | ₹69–₹79 | High payout |
+| Plan Type | Coverage |
+|----------|----------|
+| Basic Plan | Low payout |
+| Standard Plan | Medium payout |
+| Premium Plan | High payout |
 
 ### Key Idea:
 - The system **calculates the risk**, but the **user chooses the plan**  
