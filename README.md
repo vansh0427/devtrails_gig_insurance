@@ -109,3 +109,9 @@ Mobile apps allow:
 ## Prototype
 
 ![Prototype](GIG_MODEL.png)
+
+## Strategy Video
+## 🎥 Demo Video  
+
+Click below to watch our 2-minute demo:  
+👉 [Watch Here](https://drive.google.com/file/d/1tVhvZ7KSPNWaqzA9TT1d3JfIqdNQz4y3/view?usp=sharing)
