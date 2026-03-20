@@ -30,3 +30,41 @@ Instead of a fixed price for everyone , the premium depends on how risky the wor
 
 ### Basic Motto:
 Workers pay a small weekly amount, and in return, they are protected from sudden income loss caused by real-world disruptions.
+
+## Parametric Triggers
+Payouts are not manual, they are triggered automatically based on real-world conditions.
+If any of the conditions like rainfall , local disruptions cross a predefined limit , the system assumes that the worker's income will affected and triggers instant payout.
+
+## Payout is "event" based not "time based"
+Worker receives payout only when :
+-> Disruption occurs
+-> Worker is active
+-> Policy is also active
+
+If no disruption happens , no payout is made.
+
+##  Platform Choice 
+
+We will use a mobile approach , as delivery partners are usually active on mobile.
+Mobile app allows:
+--> Real time updates
+--> Better Location Tracking
+
+##   AI & Fraud Detection
+
+### AI Usage:
+- Predicts risks on the basis of weather and location
+- Dynamically adjustment of weekly premium model
+
+### Fraud Handling:
+- Cross Checked GPS data.
+- Unusual claims like worker is just registered only but did not work
+- Multiple claims from same area sudden
+
+## Tech Stack
+- Frontend :  React
+- Backend  :  Node.js
+- Database :  MongoDB
+- AI/ML    :  Python(Scikit Learn)
+- Payments :  Razorpay
+  
